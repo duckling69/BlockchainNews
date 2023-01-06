@@ -12,7 +12,7 @@ function App() {
   const { isAuthenticated } = useAuth0();
   const [loggedIn, useloggedIn] = useState(true);
 
-  if (!isAuthenticated) {
+  // if (!isAuthenticated) {
     return (<div className="App">
       <Navbar></Navbar>
       <div>
@@ -26,20 +26,21 @@ function App() {
         </Routes>
       </div>
     </div>)
-  }
-  else {
-    return (<div className="App flex justify-start w-[100vw] m-0 p-0">
-      <Sidebar ></Sidebar>
-      <div className="w-[100%]">
-        <Routes>
-          <Route path='/' element={<Dashboard />}></Route>
+  //
+  // }
+  // else {
+  //   return (<div className="App flex justify-start w-[100vw] m-0 p-0">
+  //     <Sidebar ></Sidebar>
+  //     <div className="w-[100%]">
+  //       <Routes>
+  //         <Route path='/' element={<Dashboard />}></Route>
 
-        </Routes>
-      </div>
+  //       </Routes>
+  //     </div>
 
-    </div>)
+  //   </div>)
 
-  }
+  // }
 
 }
 
