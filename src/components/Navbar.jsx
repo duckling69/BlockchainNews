@@ -48,7 +48,7 @@ const Navbar = () => {
                             About Us
                         </Link>
                         <Link to='/features' className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4">
-                            Features
+                            News
                         </Link>
                     </div>
                     <div className='text-center'>
