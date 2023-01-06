@@ -5,7 +5,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+
+      backgroundImage: theme => ({
+         'stroke': "url('../assets/stroke.png')",
+      })
+
+    },
   },
   plugins: [],
 }
