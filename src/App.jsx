@@ -1,10 +1,13 @@
 import React, { useEffect } from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
+import About from "./components/About"
 import { Routes, Route, Navigate } from "react-router-dom"
 import { useState } from "react"
 
 import { useAuth0 } from "@auth0/auth0-react";
+import News from "./pages/News"
+import Forms from "./components/Forms"
 
 
 
@@ -18,8 +21,12 @@ function App() {
       <div>
         <Routes>
         <Route path='/' element={<Hero/>}></Route>
+        <Route path='/news' element={<News/>}></Route>
+        <Route path='/addforms' element={<Forms/>}></Route>
         {/* <Route path='/about' element={<About/>}></Route>
         <Route path='/features' element={<Features/>}></Route> */}
+        <Route path='/about' element={<About/>}></Route>
+        {/* <Route path='/features' element={<Features/>}></Route> */}
         
 
 
