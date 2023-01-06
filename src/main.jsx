@@ -5,6 +5,8 @@ import './index.css'
 
 import { Auth0Provider } from "@auth0/auth0-react";
 import { BrowserRouter } from 'react-router-dom'
+import AnimCursor from './components/AnimCursor';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     >
 
       <BrowserRouter>
+        <AnimCursor/>
         <App />
       </BrowserRouter>
     </Auth0Provider>

@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className=" bg-white font-mono fixed top-0 left-0 w-full z-50 shadow-md mx-auto">
             <div className={`container  flex items-center ${isOpen?'lg:flex-row flex-col':''} justify-between`}>
                 {/* Logo */}
-                <div className="flex items-center">
+                <div className="flex items-center ml-10">
                     <img src={logo} alt="Logo" className="h-13 w-full p-4" />
                 </div>
 
@@ -41,10 +41,10 @@ const Navbar = () => {
                 {/* Navbar links */}
                 <div className={`${isOpen ? 'block' : 'hidden'} w-full flex-grow lg:flex lg:items-center lg:w-auto`}>
                     <div className="flex items-center lg:flex-row flex-col justify-center text-xl lg:flex-grow gap-10 ">
-                        <Link to='/' className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4">
+                        <Link to='/' className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4 transition duration-500">
                             Home
                         </Link>
-                        <Link to="/about" className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4">
+                        <Link to="/about" className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4 transition duration-500">
                             About Us
                         </Link>
                         <Link to='/features' className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4">
@@ -55,7 +55,7 @@ const Navbar = () => {
                         {isAuthenticated ? (<button onClick={() => logout({ returnTo: window.location.origin })} className="inline-block text-xl px-4 py-2 leading-none border border-purple-500 rounded-md text-purple-500 hover:border-black hover:text-white hover:bg-purple-500 mt-4 lg:mt-0">
                             Log Out
                         </button>) :
-                            (<button onClick={() => loginWithRedirect()} className="inline-block text-xl px-4 py-2 leading-none border border-purple-500 rounded-md text-purple-500 hover:border-black hover:text-white hover:bg-purple-500 mt-4 lg:mt-0">
+                            (<button onClick={() => loginWithRedirect()} className="inline-block text-xl px-4 py-2 leading-none border border-purple-500 rounded-md text-purple-500 hover:border-black hover:text-white hover:bg-purple-500 mt-4 lg:mt-0 transition duration-500">
                                 Login
                             </button>)
                         }
