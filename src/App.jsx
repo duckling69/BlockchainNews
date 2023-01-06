@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
+import About from "./components/About"
 import { Routes, Route, Navigate } from "react-router-dom"
 import { useState } from "react"
 
@@ -24,6 +25,8 @@ function App() {
         <Route path='/addforms' element={<Forms/>}></Route>
         {/* <Route path='/about' element={<About/>}></Route>
         <Route path='/features' element={<Features/>}></Route> */}
+        <Route path='/about' element={<About/>}></Route>
+        {/* <Route path='/features' element={<Features/>}></Route> */}
         
 
 
