@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom"
 import { useState } from "react"
 
 import { useAuth0 } from "@auth0/auth0-react";
+import News from "./pages/News"
 
 
 
@@ -12,12 +13,13 @@ function App() {
   const { isAuthenticated } = useAuth0();
   const [loggedIn, useloggedIn] = useState(true);
 
-  if (!isAuthenticated) {
+  // if (!isAuthenticated) {
     return (<div className="App">
       <Navbar></Navbar>
       <div>
         <Routes>
         <Route path='/' element={<Hero/>}></Route>
+        <Route path='/news' element={<News/>}></Route>
         {/* <Route path='/about' element={<About/>}></Route>
         <Route path='/features' element={<Features/>}></Route> */}
         
@@ -26,20 +28,21 @@ function App() {
         </Routes>
       </div>
     </div>)
-  }
-  else {
-    return (<div className="App flex justify-start w-[100vw] m-0 p-0">
-      <Sidebar ></Sidebar>
-      <div className="w-[100%]">
-        <Routes>
-          <Route path='/' element={<Dashboard />}></Route>
+  //
+  // }
+  // else {
+  //   return (<div className="App flex justify-start w-[100vw] m-0 p-0">
+  //     <Sidebar ></Sidebar>
+  //     <div className="w-[100%]">
+  //       <Routes>
+  //         <Route path='/' element={<Dashboard />}></Route>
 
-        </Routes>
-      </div>
+  //       </Routes>
+  //     </div>
 
-    </div>)
+  //   </div>)
 
-  }
+  // }
 
 }
 
