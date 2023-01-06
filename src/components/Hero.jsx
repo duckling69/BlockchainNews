@@ -62,7 +62,7 @@ const Component = () => {
                 </div>
             </div>
             {/* Image */}
-            <img src={heroImage} alt="Image" className="h-full w-fit object-cover" />
+            <img src={heroImage} alt="Image" className="h-full m-[10px] w-2/5 object-cover" />
         </div>
     );
 };
