@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // import bgimage from '../components/image.jpg'
 import {sampleDataNews} from '../constants'
 import {BsFileArrowUp} from 'react-icons/bs'
 import {BsFileArrowUpFill} from 'react-icons/bs'
+import Button from '../components/Button';
+import { Client, Account, Databases, ID } from 'appwrite'
+import user from '../assets/api/Api';
+const databases = new Databases(user)
 import Card from '../components/Card'
 import Carousel from '../components/Carousel'
 import Search from '../components/Search'
+
 
 
 
@@ -48,6 +53,19 @@ const NewsCard=({item})=>(
 )
 
 const News = () => {
+    const [news,setNews] =useState();
+    useEffect(() => {
+        const getItems = databases.listDocuments("63b97ccece09e401adea", "63b97cd6e28eaf952fe6")
+    
+        getItems.then(
+          function (response) {
+            setNews(response.documents)
+          },
+          function (error) {
+            console.log(error);
+          }
+        )
+      }, [])
   return (
     <>
     <div className='text-md text-gray-500 text-mono leading-5'>
@@ -56,28 +74,40 @@ const News = () => {
                 Latest in Leaks:
             </h1>
             <Search/>
-            <Carousel/>
+
+            {/* Carousel */}
+            
+            <Carousel
+                timer
+                fullscreen
+                arrows
+                dots
+                data={[
+                    {
+                    element: (
+                        <img
+                        className="w-full object-cover"
+                        src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""
+                        />
+                    ),
+                    },
+                    {
+                    element: (
+                        <img
+                        className="w-full object-cover"
+                        src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt=""
+                        />
+                    ),
+                    },
+                ]}
+            />
+            
+            {/* Horizontal line */}
+            <div class="bg-gradient-to-br from-green-400 to-cyan-500 w-full h-1 mb-3"></div>
+
             <div className=' flex flex-col h-[88vh]  '>
-            <div id="animation-carousel" className="relative" data-carousel="static">
-        {/* Carousel wrapper */}
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          {/* Item 1 */}
-          {sampleDataNews.map((item,i)=>(<div>{<img src={item.image} alt="" />}</div>))}
-        </div>
-        {/* Slider controls */}
-        <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-            <span className="sr-only">Previous</span>
-          </span>
-        </button>
-        <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-          <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-            <span className="sr-only">Next</span>
-          </span>
-        </button>
-      </div>
                 <div className='p-20 flex flex-row flex-wrap justify-evenly gap-10'>
             
                     {sampleDataNews.map((item,i)=>(<Card key={i} item={item}/>))}
