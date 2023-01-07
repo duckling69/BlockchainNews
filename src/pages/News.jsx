@@ -1,5 +1,5 @@
 import React from 'react'
-import bgimage from '../components/image.jpg'
+// import bgimage from '../components/image.jpg'
 import {sampleDataNews} from '../constants'
 import {BsFileArrowUp} from 'react-icons/bs'
 import {BsFileArrowUpFill} from 'react-icons/bs'
