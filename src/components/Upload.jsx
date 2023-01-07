@@ -5,7 +5,7 @@ const Upload = () => {
     <div>
       <label
         htmlFor="file"
-        className="w-[300px] h-[200px] rounded-xl border border-dotted border-blue-400 cursor-pointer flex flex-col justify-center items-center p-5 text-blue-500 text-sm font-semibold"
+        className="w-[150px] h-[150px] rounded-xl border border-dotted border-blue-400 cursor-pointer flex flex-col justify-center items-center p-5 text-blue-500 text-sm font-semibold"
       >
         <input type="file" name="file" id="file" className="hidden" />
         <svg

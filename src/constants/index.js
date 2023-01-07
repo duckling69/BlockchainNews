@@ -145,3 +145,46 @@ export const socialIcons = [
       comment:'uff kya news thi. 100% agree 💯'
     },
   ];
+
+
+
+  export const sampleDataForChart=[
+    {
+      month: 'Jan',
+      value:'100'
+    },
+    {
+      month: 'Feb',
+      value:'150'
+    },
+    {
+      month: 'Mar',
+      value:'200'
+    },
+    {
+      month: 'April',
+      value:'50'
+    },
+    {
+      month: 'May',
+      value:'150'
+    },
+    {
+      month: 'Jun',
+      value:'10',
+    },
+    {
+      month: 'Jul',
+      value:'75',
+    },  {
+      month: 'Aug',
+      value:'20',
+    },  {
+      month: 'Sept',
+      value:'45',
+    },
+    {
+      month: 'Oct',
+      value:'13',
+    },
+  ]
