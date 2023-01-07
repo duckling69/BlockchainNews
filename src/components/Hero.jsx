@@ -8,6 +8,9 @@ import { useGLTF } from "@react-three/drei";
 
 import { OrbitControls } from '@react-three/drei'
 import Social from './Social';
+import Footer1 from './Footer1';
+import Button from './Button';
+
 
 
 
@@ -51,6 +54,7 @@ function Model(props) {
 
 const Component = () => {
     return (
+        <>
         <div className=" font-mono px-4 py-2 mt-[12vh] flex items-center lg:flex-row flex-col-reverse">
             {/* Text and input */}
             <div className="text-gray-500 leading-tight pl-[5vw] w-2/5 lg:ml-0 lg:mr-auto lg:mx-0 ">
@@ -99,6 +103,7 @@ const Component = () => {
                         <button className='inline-block text-xl px-4 py-2 leading-none border bg-purple-500 text-white rounded-md   hover:bg-purple-700 mt-4 lg:mt-0 transition duration-150 ease-in-out'>
                             Login
                         </button>
+                        <Button/>
                         <button className='inline-block text-xl px-4 py-2 leading-none border bg-purple-500 text-white rounded-md   hover:bg-purple-700 mt-4 lg:mt-0 transition duration-150 ease-in-out'>
                             Signup
                         </button>
@@ -124,6 +129,8 @@ const Component = () => {
             </div>
             <Social/>
         </div>
+        <Footer1 className = 'fixed bottom-0'/>
+    </>
     );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import client from '../assets/api/Ipfs'; 
 import DatePicker from "react-datepicker";
-
+import social from '../assets/articles.svg'
 import "react-datepicker/dist/react-datepicker.css";
 
 const Forms = () => {
@@ -38,8 +38,10 @@ const Forms = () => {
     
     
   return (
-    
     <div className='flex flex-col mt-[12vh] ' method="POST" onSubmit={(e)=>{e.preventDefault() ;handleSubmit(e)}}>
+        <h1 className='text-gray-500 font-bold text-4xl text-center m-auto '>Share your News</h1>
+        <div className=' w-[100%] flex flex-row' >
+        <img src={social} className='w-[40vw] md:w-[30%] mt-10 my-5 ml-4' alt="" />
         <form className='my-10 w-[100%] text-xl'>
         <div className='flex flex-col gap-10 text-center w-[50%] m-auto'>
             <div><input type="text" className='w-[100%]  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-transparent active:border-transparent py-3 px-2' name="title" id='title'   placeholder='Title'/></div>
@@ -63,6 +65,7 @@ const Forms = () => {
 
             </div>
         </form>
+        </div>
     </div>
   )
 }
