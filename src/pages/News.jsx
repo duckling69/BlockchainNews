@@ -105,7 +105,7 @@ const News = () => {
             />
             
             {/* Horizontal line */}
-            <div class="bg-gradient-to-br from-green-400 to-cyan-500 w-full h-1 mb-3"></div>
+            <div className="bg-gradient-to-br from-green-400 to-cyan-500 w-full h-1 mb-3"></div>
 
             <div className=' flex flex-col h-[88vh]  '>
                 <div className='p-20 flex flex-row flex-wrap justify-evenly gap-10'>
