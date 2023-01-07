@@ -3,6 +3,7 @@ import React from 'react'
 import {sampleDataNews} from '../constants'
 import {BsFileArrowUp} from 'react-icons/bs'
 import {BsFileArrowUpFill} from 'react-icons/bs'
+import Button from '../components/Button';
 
 const NewsCard=({item})=>(
 
@@ -21,6 +22,11 @@ const NewsCard=({item})=>(
 
                     <div className='text-3xl text-white/80 font-semibold '>
                         {item.subtitle}
+                    </div>
+                    <div className='text-end p-2'>
+                    <button className='inline-block text-xs px-4 py-2 leading-none border bg-purple-500 text-white rounded-md   hover:bg-purple-700 mt-4 lg:mt-0 transition duration-150 ease-in-out'>
+                            Read More
+                        </button>
                     </div>
         </div>
         {item.liked===true && <div className='text-end ml-[90%] text-white hover:text-red-500 ease-in-out duration-150'>
