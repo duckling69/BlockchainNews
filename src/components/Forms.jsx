@@ -10,7 +10,8 @@ const Forms = () => {
     const data={title: "",
              subtitle:"",
              imgUrl:"",
-             date:currentDate
+             description:"",
+             date:JSON.stringify(currentDate)
              }
     const [urlArr, setUrlArr] = useState([]);
     // const [data, setData] = useState({title:'',subtitle})
@@ -18,7 +19,9 @@ const Forms = () => {
         event.preventDefault();
         data.title = document.getElementById('title').value
         data.subtitle = document.getElementById('subtitle').value
+        data.description = document.getElementById('description').value
         data.imgUrl = document.getElementById('imgUrl').value
+        
         try {
             let created = await client.add(JSON.stringify(data));
             const url = `https://ipfs.io/ipfs/${created.path}`;
@@ -40,10 +43,11 @@ const Forms = () => {
         <form className='my-10 w-[100%] text-xl'>
         <div className='flex flex-col gap-10 text-center w-[50%] m-auto'>
             <div><input type="text" className='w-[100%]  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-transparent active:border-transparent py-3 px-2' name="title" id='title'   placeholder='Title'/></div>
-            <div><input type="text" className='w-[100%]  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2' name="subtitle" placeholder='Description'  /></div>
+            <div><input type="text" className='w-[100%]  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2' name="subtitle" placeholder='Category' id='subtitle' /></div>
+            <div><textarea rows={4} className='w-[100%] text-xl h-[300px] border-2 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 px-2' name="subtitle" placeholder='Description' id='description' /></div>
             <div className='flex justify-between'>
                 <div>
-                <input type="url" className='border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2'  name="image" placeholder='fileURL'/>
+                <input type="url" className='border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2'  name="image" id='imgUrl' placeholder='fileURL'/>
                 </div>
 
                 <div>
