@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
-import About from "./components/About"
+import About from "./pages/About"
 import { Routes, Route, Navigate } from "react-router-dom"
 import { useState } from "react"
 
@@ -14,11 +14,12 @@ import Footer1 from "./components/Footer1"
 
 
 
+
 function App() {
   const { isAuthenticated } = useAuth0();
   const [loggedIn, useloggedIn] = useState(true);
 
-  // if (!isAuthenticated) {
+  if (!isAuthenticated) {
     return (<div className="App">
       <Navbar></Navbar>
       <div>
@@ -40,20 +41,30 @@ function App() {
       {/* <Footer1 className = 'fixed bottom-0'/> */}
     </div>)
   //
-  // }
-  // else {
-  //   return (<div className="App flex justify-start w-[100vw] m-0 p-0">
-  //     <Sidebar ></Sidebar>
-  //     <div className="w-[100%]">
-  //       <Routes>
-  //         <Route path='/' element={<Dashboard />}></Route>
+  }
+  else {
+    return (<div className="App">
+    <Navbar></Navbar>
+    <div>
+      <Routes>
+      <Route path='/' element={<FactCheckerPortal/>}></Route>
+      <Route path='/news' element={<News/>}></Route>
+      <Route path='/addforms' element={<Forms/>}></Route>
+      {/* <Route path='/about' element={<About/>}></Route>
+      <Route path='/features' element={<Features/>}></Route> */}
+      <Route path='/about' element={<About/>}></Route>
+      {/* <Route path='/features' element={<Features/>}></Route> */}
+      
 
-  //       </Routes>
-  //     </div>
+      <Route path='/dashboard' element={<FactCheckerPortal/>}></Route>
+      <Route path='/news/:id' element={<NewsDetails/>}></Route>
 
-  //   </div>)
+      </Routes>
+    </div>
 
-  // }
+  </div>)
+  }
+  
 
 }
 

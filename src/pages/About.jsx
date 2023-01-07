@@ -2,9 +2,8 @@ import React from 'react'
 import aboutimg from '../assets/undraw_news_re_6uub.svg'
 import social from '../assets/undraw_landscape_photographer_156c.svg'
 import team from '../assets/team.svg'
-import Footer1 from './Footer1'
-import CtaAboutUs from './CtaAboutUs'
-
+import Footer1 from '../components/Footer1'
+import CtaAboutUs from '../components/CtaAboutUs'
 
 const About = () => {
     return (
@@ -45,13 +44,13 @@ const About = () => {
 
                     {/* small img for working */}
                     {/* <img src={team} className='w-[60vw] md:w-[50%] mt-10 my-5' alt="" /> */}
+                <img src={team} className='w-[60vw] md:w-[80%] mt-10 my-5' alt="" />
                     <h1 className='font-extrabold text-3xl text-center mt-8'>
                         What we do?
                     </h1>
                     <p className='text-gray-700 text-start mt-4'> Blockchain News is a Web-App which shows the news reported by reporters anonymously. They can check the info reported and see the proof. Reporters can report at any time by signing transaction into Blockchain without revealing their identity. </p>
                    
                 </div>
-                <img src={team} className='w-[60vw] md:w-[20%] mt-10 my-5' alt="" />
             </div>
             <CtaAboutUs/>
         </div>
