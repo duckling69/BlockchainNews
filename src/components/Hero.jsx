@@ -55,7 +55,7 @@ function Model(props) {
 const Component = () => {
     return (
         <>
-        <div className=" font-mono px-4 py-2 mt-[12vh] flex items-center lg:flex-row flex-col-reverse">
+        <div className=" font-mono px-4 py-2 mt-[12vh] flex items-center lg:flex-row flex-col-reverse h-[76vh] mb-[12vh]">
             {/* Text and input */}
             <div className="text-gray-500 leading-tight pl-[5vw] w-2/5 lg:ml-0 lg:mr-auto lg:mx-0 ">
                 <motion.div 

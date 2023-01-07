@@ -16,6 +16,14 @@ const HorizontalScrollMenu = () => {
             <div>
                 sample text
             </div>
+           <div className='flex justify-around gap-10'>
+           <button className='rounded-xl py-2 px-4 bg-blue-500 text-white  -mb-5 hover:bg-blue-700 ease-in-out duration-150 w-fit '>
+              View
+            </button>
+            <button className='rounded-xl py-2 px-4 border-blue-500 border-2 text-blue-500 -mb-5 hover:text-white hover:bg-blue-700 ease-in-out duration-150 w-fit '>
+              Approve
+            </button>
+           </div>
         </div>
       ))}
     </ScrollMenu>
