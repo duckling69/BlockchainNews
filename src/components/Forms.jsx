@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import client from '../assets/api/Ipfs'; 
 import DatePicker from "react-datepicker";
-
 import "react-datepicker/dist/react-datepicker.css";
 
 const Forms = () => {
@@ -23,7 +22,7 @@ const Forms = () => {
         data.imgUrl = document.getElementById('imgUrl').value
         
         try {
-            let created = await client.add(JSON.stringify(data));
+            let created = await client.add(JSON.parse(JSON.stringify(data)));
             const url = `https://ipfs.io/ipfs/${created.path}`;
             setUrlArr((prev) => [...prev, url]);
             console.log(urlArr)
