@@ -1,6 +1,6 @@
 import React from 'react'
 import aboutimg from '../assets/undraw_news_re_6uub.svg'
-import social from '../assets/social.svg'
+import social from '../assets/undraw_landscape_photographer_156c.svg'
 const About = () => {
     return (
         <div className=" font-mono px-4 py-2 mt-[15vh] flex items-center flex-col ">
@@ -28,7 +28,7 @@ const About = () => {
                 <div className="text-gray-500 leading-tight pl-[5vw] max-w-lg lg:ml-0 my-5">
 
             
-                    {/* <img src={social} className='w-[60vw] md:w-[50%] mt-10 my-5' alt="" /> */}
+                    <img src={social} className='w-[60vw] md:w-[50%] mt-10 my-5' alt="" />
                     <h1 className='font-extrabold text-3xl text-center m-auto '>
                         Why Us?
                     </h1>
