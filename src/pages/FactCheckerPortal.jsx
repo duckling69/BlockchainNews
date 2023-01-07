@@ -1,3 +1,4 @@
+import { Chart } from 'chart.js';
 import React from 'react'
 import HorizontalScrollMenu from '../components/HorizontalScrollMenu';
 
@@ -14,7 +15,7 @@ const FactCheckerPortal = () => {
         <div className='flex flex-col h-[80vh]'>
             <div className='flex m-20 h-[40%] justify-between'>
                 <div className='bg-black rounded-lg w-[45%] h-[100%]'>
-                    Chart
+                    <Chart/>
                 </div>
                 <div className='bg-black text-white grid place-items-center rounded-lg w-[45%] h-[100%]'>
                     Chart
