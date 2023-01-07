@@ -3,6 +3,8 @@ import aboutimg from '../assets/undraw_news_re_6uub.svg'
 import social from '../assets/undraw_landscape_photographer_156c.svg'
 import team from '../assets/team.svg'
 import Footer1 from '../components/Footer1'
+import CtaAboutUs from '../components/CtaAboutUs'
+
 const About = () => {
     return (
         <div>
@@ -50,6 +52,7 @@ const About = () => {
                    
                 </div>
             </div>
+            <CtaAboutUs/>
         </div>
         <Footer1 className = 'fixed bottom-0'/>
         </div>
