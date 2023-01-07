@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = () => {
+const Button = (props) => {
   return (
     <div>
       <button className="inline-flex items-center gap-2 justify-center px-8 py-4 font-sans font-semibold tracking-wide text-white bg-blue-500 rounded-lg h-[60px]">
@@ -20,7 +20,7 @@ const Button = () => {
             />
           </svg>
         </span>
-        <span>Get started</span>
+        <span>{props.text}</span>
       </button>
     </div>
   )

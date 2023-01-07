@@ -103,7 +103,9 @@ const Component = () => {
                         <button className='inline-block text-xl px-4 py-2 leading-none border bg-purple-500 text-white rounded-md   hover:bg-purple-700 mt-4 lg:mt-0 transition duration-150 ease-in-out'>
                             Login
                         </button>
-                        <Button/>
+                        <a href="/addforms">
+                        <Button text="Getting Started"/>
+                        </a>
                         <button className='inline-block text-xl px-4 py-2 leading-none border bg-purple-500 text-white rounded-md   hover:bg-purple-700 mt-4 lg:mt-0 transition duration-150 ease-in-out'>
                             Signup
                         </button>
