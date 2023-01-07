@@ -10,6 +10,7 @@ import News from "./pages/News"
 import Forms from "./components/Forms"
 import FactCheckerPortal from "./pages/FactCheckerPortal"
 import NewsDetails from "./pages/NewsDetails"
+import Footer1 from "./components/Footer1"
 
 
 
@@ -36,7 +37,7 @@ function App() {
 
         </Routes>
       </div>
- 
+      {/* <Footer1 className = 'fixed bottom-0'/> */}
     </div>)
   //
   // }
