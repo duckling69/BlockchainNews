@@ -3,6 +3,7 @@ import client from '../assets/api/Ipfs';
 import DatePicker from "react-datepicker";
 import social from '../assets/articles.svg'
 import "react-datepicker/dist/react-datepicker.css";
+import Upload from './Upload';
 
 const Forms = () => {
     // const [data, setData] = useState({title:'',subtitle})
@@ -49,7 +50,9 @@ const Forms = () => {
             <div><textarea rows={4} className='w-[100%] text-xl h-[300px] border-2 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 px-2' name="subtitle" placeholder='Description' id='description' /></div>
             <div className='flex justify-between'>
                 <div>
-                <input type="url" className='border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2'  name="image" id='imgUrl' placeholder='fileURL'/>
+
+                {/* <input type="url" className='border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2'  name="image" id='imgUrl' placeholder='fileURL'/> */}
+                <Upload/>
                 </div>
 
                 <div>
