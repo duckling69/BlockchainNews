@@ -1,9 +1,14 @@
 import React from 'react'
 import bgimage from '../components/image.jpg'
 import {sampleDataNews} from '../constants'
+import {BsFileArrowUp} from 'react-icons/bs'
+import {BsFileArrowUpFill} from 'react-icons/bs'
 
 const NewsCard=({item})=>(
-    <div className='w-[30%] rounded-lg flex flex-col bg-gray-800 aspect-video '>
+
+    <div className='w-[30%] rounded-lg flex flex-col bg-gray-800 aspect-video pb-5 '>
+
+        
         <div className='p-1 h-[80%]'>
             {item.image}
         </div>
@@ -18,8 +23,18 @@ const NewsCard=({item})=>(
                         {item.subtitle}
                     </div>
         </div>
+        {item.liked===true && <div className='text-end ml-[90%] text-white hover:text-red-500 ease-in-out duration-150'>
+        <BsFileArrowUpFill className='text-3xl' />
+        </div>
+        }
+        {!item.liked===true && <div className='text-end ml-[90%] text-white hover:text-red-500 ease-in-out duration-150'>
+        <BsFileArrowUp className='text-3xl' />
+        </div>
 
+        }
+        
     </div>
+
 )
 
 const News = () => {
@@ -45,6 +60,9 @@ const News = () => {
                     Moti gand ki exclusive photos....
                     </div>
                     </div>
+                    <div className='text-end ml-[90%] py-5 '>
+        <BsFileArrowUp className='text-3xl text-white hover:fill-black ease-in-out duration-150 ' />
+        </div>
 
                 </div>
             <div className='p-20 flex flex-row flex-wrap gap-10'>

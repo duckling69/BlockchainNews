@@ -37,7 +37,8 @@ export const socialIcons = [
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:'image1',
+      liked:true,
     },
     {
       title:'title1',
