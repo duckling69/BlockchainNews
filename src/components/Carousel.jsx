@@ -46,7 +46,7 @@ export default function Carousel({
       className={`flex mx-auto mb-5 overflow-hidden ${
         isFullscreen
           ? "fixed top-0 left-0 z-50 h-screen bg-white dark:bg-slate-700"
-          : "w-1/2 relative"
+          : "w-3/4 relative"
       }`}
     >
       {data.map((item, index) => (

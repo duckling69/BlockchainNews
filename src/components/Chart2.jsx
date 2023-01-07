@@ -3,13 +3,13 @@ import {Chart as ChartJS} from 'chart.js/auto'
 import { Bar } from 'react-chartjs-2';
 import { sampleDataForChart } from '../constants';
 
-export const Chart = () => {
+export const Chart2 = () => {
     const data={
-        labels:sampleDataForChart.map((item)=>item.month),
+        labels:['Sports','Political','International','Crimes','Entertainment','Religious'],
         datasets: [
           {
-            label:'Monthly Facts Accepted',
-            data:sampleDataForChart.map((item)=>item.value)
+            label:'Top Category of Facts accepted',
+            data:[40,50,60,42,54,67],
           },
         ]};
   return (
