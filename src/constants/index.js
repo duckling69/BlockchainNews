@@ -121,3 +121,26 @@ export const socialIcons = [
       image:'image1'
     },
   ];
+
+  export const sampleComments=[
+    {
+      user:'shirhso',
+      comment:'uff kya news thi. 100% agree 💯'
+    },
+    {
+      user:'shirhso',
+      comment:'uff kya news thi. 100% agree 💯'
+    },
+    {
+      user:'shirhso',
+      comment:'uff kya news thi. 100% agree 💯 Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti blanditiis pariatur enim rem esse quam provident maiores mollitia voluptates atque quidem a quas voluptas sit laboriosam eaque corporis earum aliquam, accusantium et qui, ex commodi. Consectetur praesentium ducimus repudiandae distinctio ea et porro omnis neque nobis rerum, quo molestiae voluptas' 
+    },
+    {
+      user:'shirhso',
+      comment:'uff kya news thi. 100% agree 💯'
+    },
+    {
+      user:'shirhso',
+      comment:'uff kya news thi. 100% agree 💯'
+    },
+  ];
