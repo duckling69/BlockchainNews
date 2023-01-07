@@ -26,7 +26,8 @@ const Forms = () => {
         <form className='my-10 w-[100%] text-xl'>
         <div className='flex flex-col gap-10 text-center w-[50%] m-auto'>
             <div><input type="text" className='w-[100%]  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-transparent active:border-transparent py-3 px-2' name="title"   placeholder='Title'/></div>
-            <div><input type="text" className='w-[100%]  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2' name="subtitle" placeholder='Description' /></div>
+            <div><input type="text" className='w-[100%]  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2' name="subtitle" placeholder='Category' /></div>
+            <div><textarea rows={4} className='w-[100%] text-xl h-[300px] border-2 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 px-2' name="subtitle" placeholder='Description' /></div>
             <div className='flex justify-between'>
                 <div>
                 <input type="url" className='border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2'  name="image" placeholder='fileURL'/>
