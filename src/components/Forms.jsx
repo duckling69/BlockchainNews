@@ -3,36 +3,41 @@ import client from '../assets/api/Ipfs';
 import DatePicker from "react-datepicker";
 import social from '../assets/articles.svg'
 import "react-datepicker/dist/react-datepicker.css";
+import user from '../assets/api/Api';
+import { Client, Account, Databases, ID } from 'appwrite'
+
+const databases = new Databases(user)
+
 
 const Forms = () => {
     // const [data, setData] = useState({title:'',subtitle})
     const [currentDate, setCurrentDate] = useState(new Date())
+    const [news,setNews] = useState();
     const data={title: "",
              subtitle:"",
              imgUrl:"",
              description:"",
              date:JSON.stringify(currentDate)
              }
-    const [urlArr, setUrlArr] = useState([]);
     // const [data, setData] = useState({title:'',subtitle})
     const handleSubmit= async (event)=>{
         event.preventDefault();
+        const url='';
         data.title = document.getElementById('title').value
         data.subtitle = document.getElementById('subtitle').value
         data.description = document.getElementById('description').value
         data.imgUrl = document.getElementById('imgUrl').value
         
         try {
-            let created = await client.add(JSON.parse(JSON.stringify(data)));
+            let created = await client.add(JSON.stringify(data));
             const url = `https://ipfs.io/ipfs/${created.path}`;
-            setUrlArr((prev) => [...prev, url]);
-            console.log(urlArr)
+            const promise = databases.createDocument("63b97ccece09e401adea", "63b97cd6e28eaf952fe6", ID.unique(),
+      { url: url })
+            
           } catch (error) {
             console.log(error.message);
         }
-        data.title = ""
-        data.subtitle = ""
-        data.imgUrl =""
+        
     }
 
     

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import bgimage from '../components/image.jpg'
 import {sampleDataNews} from '../constants'
 import {BsFileArrowUp} from 'react-icons/bs'
 import {BsFileArrowUpFill} from 'react-icons/bs'
 import Button from '../components/Button';
+import { Client, Account, Databases, ID } from 'appwrite'
+import user from '../assets/api/Api';
+const databases = new Databases(user)
+
 
 const NewsCard=({item})=>(
 
@@ -44,6 +48,19 @@ const NewsCard=({item})=>(
 )
 
 const News = () => {
+    const [news,setNews] =useState();
+    useEffect(() => {
+        const getItems = databases.listDocuments("63b97ccece09e401adea", "63b97cd6e28eaf952fe6")
+    
+        getItems.then(
+          function (response) {
+            setNews(response.documents)
+          },
+          function (error) {
+            console.log(error);
+          }
+        )
+      }, [])
   return (
     <div className='text-md text-gray-500 text-mono leading-5'>
         <div className='text-center w-100 mt-[12vh] mx-20'>
