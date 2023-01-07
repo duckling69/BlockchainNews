@@ -12,9 +12,14 @@
     "@auth0/auth0-react": "^1.12.0",
     "@react-three/drei": "^9.51.10",
     "@react-three/fiber": "^8.10.0",
+<<<<<<< HEAD
     "@types/three": "^0.148.0",
     "buffer": "^6.0.3",
     "firebase": "^9.15.0",
+=======
+    "buffer": "^6.0.3",
+    "@types/three": "^0.148.0",
+>>>>>>> 6fdee31bff2d00013f6c10e77e0aab63d46e8c79
     "framer-motion": "^8.2.4",
     "ipfs-http-client": "^59.0.0",
     "react": "^18.2.0",

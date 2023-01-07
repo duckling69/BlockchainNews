@@ -9,6 +9,8 @@ import { useAuth0 } from "@auth0/auth0-react";
 import News from "./pages/News"
 import Forms from "./components/Forms"
 import FactCheckerPortal from "./pages/FactCheckerPortal"
+import NewsDetails from "./pages/NewsDetails"
+import Footer1 from "./components/Footer1"
 
 
 
@@ -31,10 +33,11 @@ function App() {
         
 
         <Route path='/dashboard' element={<FactCheckerPortal/>}></Route>
-        <Route path='/news/:id' element={<FactCheckerPortal/>}></Route>
+        <Route path='/news/:id' element={<NewsDetails/>}></Route>
 
         </Routes>
       </div>
+      {/* <Footer1 className = 'fixed bottom-0'/> */}
     </div>)
   //
   // }
