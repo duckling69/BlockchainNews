@@ -47,7 +47,7 @@ const About = () => {
                         What we do?
                     </h1>
                     <div className='w-1/2 md:w-3/4 h-32 bg-pink-100 absolute right-0 top-0 z-[-1]'></div>
-                    <p className='text-gray-700 text-start mt-4'> Blockchain News is a Web-App which shows the news reported by reporters anonymously. They can check the info reported and see the proof. Reporters can report at any time by signing transaction into Blockchain without revealing their identity. </p>
+                    {/* <p className='text-gray-700 text-start mt-4'> Blockchain News is a Web-App which shows the news reported by reporters anonymously. They can check the info reported and see the proof. Reporters can report at any time by signing transaction into Blockchain without revealing their identity. </p> */}
                     <p className='text-gray-700 text-start mt-4'> Phantom News is a Web-App which shows the news reported by reporters anonymously. They can check the info reported and see the proof. Reporters can report at any time by signing transaction into Blockchain without revealing their identity. </p>
                    
                 </div>
