@@ -8,6 +8,10 @@ import { Client, Account, Databases, ID } from 'appwrite'
 import user from '../assets/api/Api';
 const databases = new Databases(user)
 import Card from '../components/Card'
+import Carousel from '../components/Carousel'
+import Search from '../components/Search'
+
+
 
 
 const NewsCard=({item})=>(
@@ -69,7 +73,8 @@ const News = () => {
             <h1 className='text-5xl font-mono font-bold mb-10 '>
                 Latest in Leaks:
             </h1>
-
+            <Search/>
+            <Carousel/>
             <div className=' flex flex-col h-[88vh]  '>
             <div id="animation-carousel" className="relative" data-carousel="static">
         {/* Carousel wrapper */}
