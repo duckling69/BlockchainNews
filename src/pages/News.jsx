@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import bgimage from '../components/image.jpg'
 import {sampleDataNews} from '../constants'
 import {BsFileArrowUp} from 'react-icons/bs'
@@ -7,6 +7,7 @@ import Button from '../components/Button';
 import { Client, Account, Databases, ID } from 'appwrite'
 import user from '../assets/api/Api';
 const databases = new Databases(user)
+import Card from '../components/Card'
 
 
 const NewsCard=({item})=>(
