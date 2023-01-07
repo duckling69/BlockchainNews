@@ -31,6 +31,7 @@ function App() {
         
 
         <Route path='/dashboard' element={<FactCheckerPortal/>}></Route>
+        <Route path='/news/:id' element={<FactCheckerPortal/>}></Route>
 
         </Routes>
       </div>
