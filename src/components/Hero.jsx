@@ -1,6 +1,52 @@
-import React from 'react';
+import React, { useRef, Suspense } from 'react';
 import heroImage from '../assets/hero.svg'
 import { motion } from 'framer-motion';
+import { BoxGeometry, Mesh} from 'three'
+import { Canvas, useFrame } from '@react-three/fiber';
+import { PerspectiveCamera } from '@react-three/drei'
+import { useGLTF } from "@react-three/drei";
+
+import { OrbitControls } from '@react-three/drei'
+import Social from './Social';
+
+
+
+function Model(props) {
+    const { nodes, materials } = useGLTF("earth.glb");
+    const meshRef = React.createRef();
+
+    useFrame(() => {
+        if(!meshRef.current){
+            return;
+        }
+        // meshRef.current.rotation.x += 0.01;
+        meshRef.current.rotation.y += 0.006;
+    })
+
+  return (
+    <group {...props} dispose={null}>
+      <group rotation={[-Math.PI / 2, 0, 0]}>
+        <group rotation={[Math.PI / 2, 0, 0]}>
+          <group
+            // position={[-0.05, 1.25, 0.07]}
+            // rotation={[Math.PI, 0, Math.PI]}
+            scale={[2,2,2]}
+          >
+            <mesh
+              ref={meshRef}
+              castShadow
+              receiveShadow
+              geometry={nodes.Object_Planet_0.geometry}
+              material={materials.Planet}
+            //   position={[0, -1, 0]}
+            />
+          </group>
+        </group>
+      </group>
+    </group>
+  );
+}
+
 
 
 const Component = () => {
@@ -62,7 +108,21 @@ const Component = () => {
                 </div>
             </div>
             {/* Image */}
-            <img src={heroImage} alt="Image" className="h-full w-fit object-cover" />
+            {/* <img src={heroImage} alt="Image" className="h-full w-fit object-cover" /> */}
+            <div className=' w-[35vw] aspect-square mt-0 mr-11 '>
+                {/* <Threed/> */}
+                 <Canvas>
+                    <OrbitControls enableZoom = {false}/>
+                    <ambientLight/>
+                    <PerspectiveCamera makeDefault fov = {75} position={[0,0,4]}/>
+                    <pointLight position={[10,10,10]}/>
+                    {/* <Cube/> */}
+                    <Suspense fallback={null}>
+                        <Model/>
+                    </Suspense>
+                </Canvas>
+            </div>
+            <Social/>
         </div>
     );
 };
