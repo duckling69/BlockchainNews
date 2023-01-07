@@ -47,15 +47,18 @@ const Navbar = () => {
                         <Link to="/about" className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4 transition duration-500">
                             About Us
                         </Link>
-                        <Link to='/features' className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4">
-                            News
+                        <Link to='/addforms' className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4">
+                            Have Something to share?
+                        </Link>
+                        <Link to='/news' className="block mt-4 lg:inline-block lg:mt-0 text-gray-500 hover:text-purple-500 mr-4">
+                            Newsroom
                         </Link>
                     </div>
                     <div className='text-center'>
                         {isAuthenticated ? (<button onClick={() => logout({ returnTo: window.location.origin })} className="inline-block text-xl px-4 py-2 leading-none border border-purple-500 rounded-md text-purple-500 hover:border-black hover:text-white hover:bg-purple-500 mt-4 lg:mt-0">
                             Log Out
                         </button>) :
-                            (<button onClick={() => loginWithRedirect()} className="inline-block text-xl px-4 py-2 leading-none border border-purple-500 rounded-md text-purple-500 hover:border-black hover:text-white hover:bg-purple-500 mt-4 lg:mt-0 transition duration-500">
+                            (<button onClick={() => loginWithRedirect()} className="inline-block text-xl px-4 py-2 leading-none border border-purple-500 rounded-md text-purple-500 hover:border-black hover:text-white hover:bg-purple-500 mt-4 lg:mt-0 transition duration-500 mr-6">
                                 Login
                             </button>)
                         }

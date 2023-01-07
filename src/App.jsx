@@ -7,6 +7,8 @@ import { useState } from "react"
 
 import { useAuth0 } from "@auth0/auth0-react";
 import News from "./pages/News"
+import Forms from "./components/Forms"
+import FactCheckerPortal from "./pages/FactCheckerPortal"
 
 
 
@@ -21,10 +23,15 @@ function App() {
         <Routes>
         <Route path='/' element={<Hero/>}></Route>
         <Route path='/news' element={<News/>}></Route>
+        <Route path='/addforms' element={<Forms/>}></Route>
+        {/* <Route path='/about' element={<About/>}></Route>
+        <Route path='/features' element={<Features/>}></Route> */}
         <Route path='/about' element={<About/>}></Route>
         {/* <Route path='/features' element={<Features/>}></Route> */}
         
 
+        <Route path='/dashboard' element={<FactCheckerPortal/>}></Route>
+        <Route path='/news/:id' element={<FactCheckerPortal/>}></Route>
 
         </Routes>
       </div>
