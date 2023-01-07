@@ -8,11 +8,13 @@ const Card = ({item}) => {
           aria-label="card-overlay-v3"
         >
           <div className="w-full rounded-xl h-[250px] flex-shrink-0">
+          <div className="w-full rounded-xl h-[250px] flex-shrink-0">
             <img
               src="https://bit.ly/3zzCTUT"
               alt=""
               className="object-cover w-full h-full rounded-xl"
             />
+          </div>
           </div>
           <div className="flex flex-col flex-1 p-5">
             <div className="pb-5 mb-5 border-b border-gray-200">
