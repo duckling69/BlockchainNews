@@ -13,7 +13,7 @@ const NewsCard=({item})=>(
             {item.image}
         </div>
 
-        <div className=''>
+        <div className='bg-red-500 p-0'>
 
                     <div className='text-3xl text-white font-semibold'>
                    {item.title}
@@ -53,11 +53,11 @@ const News = () => {
                     <div className=''>
 
                     <div className='text-3xl text-white font-semibold'>
-                    Shirsho ki gand moti hai
+                    Headline
                     </div>
 
                     <div className='text-3xl text-white/80 font-semibold '>
-                    Moti gand ki exclusive photos....
+                    Lorem ipsum....
                     </div>
                     </div>
                     <div className='text-end ml-[90%] py-5 '>
@@ -66,7 +66,9 @@ const News = () => {
 
                 </div>
             <div className='p-20 flex flex-row flex-wrap gap-10'>
+        
                 {sampleDataNews.map((item,i)=>(<NewsCard key={i} item={item}/>))}
+                
             </div>
             </div>
 
