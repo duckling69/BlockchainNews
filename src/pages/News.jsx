@@ -74,7 +74,7 @@ const News = () => {
         {/* Carousel wrapper */}
         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
           {/* Item 1 */}
-          {sampleDataNews.map((item,i)=>(<div>{item.image}</div>))}
+          {sampleDataNews.map((item,i)=>(<div>{<img src={item.image} alt="" />}</div>))}
         </div>
         {/* Slider controls */}
         <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -90,7 +90,7 @@ const News = () => {
           </span>
         </button>
       </div>
-                <div className='p-20 flex flex-row flex-wrap gap-10'>
+                <div className='p-20 flex flex-row flex-wrap justify-evenly gap-10'>
             
                     {sampleDataNews.map((item,i)=>(<Card key={i} item={item}/>))}
                     

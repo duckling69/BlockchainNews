@@ -1,3 +1,4 @@
+import teamimg from '../assets/team.svg'
 export const socialIcons = [
     {
       name: 'github',
@@ -37,88 +38,88 @@ export const socialIcons = [
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1',
+      image:teamimg,
       liked:true,
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
     {
       title:'title1',
       subtitle:'subtitle1',
-      image:'image1'
+      image:teamimg
     },
   ];
 

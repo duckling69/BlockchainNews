@@ -4,7 +4,7 @@ const Card = ({item}) => {
   return (
     <div>
         <div
-          className="bg-white w-[250px] rounded-xl shadow"
+          className="bg-white w-[20vw] rounded-xl shadow"
           aria-label="card-overlay-v3"
         >
           <div className="w-full rounded-xl h-[250px] flex-shrink-0">
