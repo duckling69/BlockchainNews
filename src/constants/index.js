@@ -187,4 +187,8 @@ export const socialIcons = [
       month: 'Oct',
       value:'13',
     },
+    {
+      month: 'Nov',
+      value:'18',
+    },
   ]

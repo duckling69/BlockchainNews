@@ -3,7 +3,7 @@ import React from 'react'
 const Search = () => {
   return (
     <div>
-       <div className="flex items-center gap-5 w-[800px] border border-gray-200 rounded-lg py-3 px-5 mx-auto mb-5">
+       <div className="flex items-center gap-5 w-[800px] border border-gray-100 rounded-lg py-3 px-5 mx-auto mb-5">
                 <span className="flex-shrink-0 text-gray-500">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const Search = () => {
                 <input
                   type="text"
                   className="w-full outline-none bg-transparent"
-                  placeholder="Enter your content..."
+                  placeholder="Search..."
                 />
                 <span className="flex-shrink-0 text-slate-500">
                   <svg
