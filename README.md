@@ -15,8 +15,8 @@ In addition to these technical challenges, it was also challenging to work with 
 React Tailwindcss IPFS appwrite Auth0
 
 # Links
-https://github.com/duckling69/PhantomPress
-https://blockchain-news-inky.vercel.app/
+https://github.com/duckling69/PhantomPress<br/>
+https://blockchain-news-inky.vercel.app/<br/>
 http://phantompress.co/
 
 # Video Demo
