@@ -7,11 +7,11 @@ import {AiOutlineRightCircle} from 'react-icons/ai'
 const HorizontalScrollMenu = () => {
   return (
     <div>
-        <ScrollMenu className='' LeftArrow={LeftArrow} RightArrow={RightArrow}>
+        <ScrollMenu className='h-[100%]' LeftArrow={LeftArrow} RightArrow={RightArrow}>
       {sampleDataNews.map(({ item }) => (
         <div className='h-[30vh] aspect-video mx-20 rounded-xl bg-gray-300 flex flex-col justify-around '>
             <div className='bg-black p-1'>
-                img
+                <img src="https://www.siasat.com/wp-content/uploads/2022/12/Jal.jpg" className='w-[65%]' alt="" />
             </div>
             <div>
                 Headline

@@ -18,7 +18,7 @@ const NewsDetails = () => {
         </div>
         <div className=' flex flex-col min-h-[88vh] bg-gray-500 '>
             <div className='bg-black object-cover p-5 grid place-items-center rounded-lg'>
-                <img src={image} alt="" className='p-2 w-[30%]' />
+                <img src={'https://www.siasat.com/wp-content/uploads/2022/12/Jal.jpg'} alt="" className='p-2 w-[30%]' />
             </div>
 
             <div className='grid place-items-end mt-5 mr-5 mb-0 text-3xl text-white hover:text-black'>

@@ -43,10 +43,10 @@ export default function Carousel({
 
   return (
     <div
-      className={`flex mx-auto mb-5 overflow-hidden ${
+      className={`flex mx-auto mb-5 overflow-hidden justify-center ${
         isFullscreen
           ? "fixed top-0 left-0 z-50 h-screen bg-white dark:bg-slate-700"
-          : "w-3/4 relative"
+          : "w-1/2 relative"
       }`}
     >
       {data.map((item, index) => (

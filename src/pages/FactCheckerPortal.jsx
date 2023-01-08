@@ -23,7 +23,7 @@ const FactCheckerPortal = () => {
                 </div>
             </div>
 
-            <div className='h-[50%]'>
+            <div className='h-[60%]'>
                 <HorizontalScrollMenu/>
             </div>
         </div>

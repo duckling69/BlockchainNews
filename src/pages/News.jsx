@@ -14,6 +14,7 @@ import Search from '../components/Search'
 
 
 
+
 const NewsCard=({item})=>(
 
     <div className='w-[30%] rounded-lg flex flex-col bg-gray-800 aspect-video pb-5 '>
@@ -86,8 +87,8 @@ const News = () => {
                     {
                     element: (
                         <img
-                        className="w-full object-cover"
-                        src="https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        className="w-[70%] object-cover"
+                        src="https://www.siasat.com/wp-content/uploads/2022/12/Jal.jpg"
                         alt=""
                         />
                     ),
@@ -95,8 +96,8 @@ const News = () => {
                     {
                     element: (
                         <img
-                        className="w-full object-cover"
-                        src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        className="w-[70%] object-contain"
+                        src="https://img.etimg.com/thumb/msid-96819984,width-300,height-225,imgsize-745574,,resizemode-75/jobs-in-canada-us-one-country-is-expanding-immigration-programme-details-here.jpg"
                         alt=""
                         />
                     ),

@@ -1,9 +1,10 @@
 import React from 'react'
 import {BiUpvote,BiDownvote} from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 const Card = ({item}) => {
-  // console.log(item)
+  console.log(item)
   return (
-    <div>
+    <Link to={`/news/${item.id}`}>
         <div
           className="bg-white w-[20vw] rounded-xl shadow"
           aria-label="card-overlay-v3"
@@ -11,7 +12,7 @@ const Card = ({item}) => {
           <div className="w-full rounded-xl h-[250px] flex-shrink-0">
           <div className="w-full rounded-xl h-[250px] flex-shrink-0">
             <img
-              src={item.imgUrl}
+              src={item.image}
               alt=""
               className="object-cover w-full h-full rounded-xl"
             />
@@ -41,7 +42,7 @@ const Card = ({item}) => {
             </div>
           </div>
         </div>
-    </div>  
+    </Link>  
   )
 }
 
