@@ -18,7 +18,7 @@ const Forms = () => {
              subtitle:"",
              imgUrl:"",
              description:"",
-             date:JSON.stringify(currentDate)
+             date:currentDate.toDateString()
              }
     // const [data, setData] = useState({title:'',subtitle})
     const handleSubmit= async (event)=>{
@@ -62,7 +62,7 @@ const Forms = () => {
                 </div>
 
                 <div>
-                <DatePicker className='  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2' id='date' selected={currentDate} onChange={(date) => setCurrentDate(date)} maxDate={new Date()} placeholder='Date cannot exceed today ' />
+                <DatePicker className='  border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2 text-end' value={currentDate.toDateString()} selected={currentDate} onChange={(date) => setCurrentDate(date)} maxDate={new Date()} placeholder='Date cannot exceed today ' />
 
                 </div>
             </div>
@@ -70,7 +70,7 @@ const Forms = () => {
         </div>
             <div className='text-center my-5'>
 
-        <button className='px-2 py-3 bg-purple-500 hover:bg-purple-700 rounded-lg text-white' type='submit' onClick={handleSubmit} > Submit this News </button>
+        <button className='px-2 py-3 bg-purple-500 hover:bg-purple-700 rounded-lg text-white' type='submit' onClick={handleSubmit}> Submit this News </button>
 
             </div>
         </form>

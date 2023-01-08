@@ -1,5 +1,5 @@
 import React from 'react'
-import {BiUpvote} from 'react-icons/bi'
+import {BiUpvote,BiDownvote} from 'react-icons/bi'
 const Card = ({item}) => {
   // console.log(item)
   return (
@@ -35,6 +35,8 @@ const Card = ({item}) => {
                 </svg> */}
                 <BiUpvote className="w-5 h-5 text-yellow-500"/>
                 <span className="text-sm font-bold">52</span>
+                <BiDownvote className="w-5 h-5 text-yellow-500"/>
+                <span className="text-sm font-bold">12</span>
               </div>
             </div>
           </div>

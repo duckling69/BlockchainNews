@@ -60,9 +60,6 @@ const Footer1 = () => {
                 <li>
                   <a className="text-gray-600 hover:text-gray-800">How to Donate</a>
                 </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">Donor Privacy</a>
-                </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">

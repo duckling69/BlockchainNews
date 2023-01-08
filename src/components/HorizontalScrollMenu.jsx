@@ -14,7 +14,7 @@ const HorizontalScrollMenu = () => {
                 img
             </div>
             <div>
-                sample text
+                Headline
             </div>
            <div className='flex justify-around gap-10'>
            <button className='rounded-xl py-2 px-4 bg-blue-500 text-white  -mb-5 hover:bg-blue-700 ease-in-out duration-150 w-fit '>
