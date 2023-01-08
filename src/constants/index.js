@@ -88,4 +88,8 @@ export const sampleDataNews=[
       month: 'Oct',
       value:'13',
     },
+    {
+      month: 'Nov',
+      value:'18',
+    },
   ]

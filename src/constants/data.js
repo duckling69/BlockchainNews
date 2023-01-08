@@ -3,7 +3,7 @@ import { Line } from 'react-chartjs-2';
 <Line
   datasetIdKey='id'
   data={{
-    labels:['jun','jul','Aug'],
+    labels:['jun','jul','Aug','Sept','Oct',"Nov"],
     datasets: [
       { 
         handle:'Sumant',
