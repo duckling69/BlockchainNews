@@ -1,6 +1,7 @@
 import React from 'react'
 import {BiUpvote} from 'react-icons/bi'
 const Card = ({item}) => {
+  // console.log(item)
   return (
     <div>
         <div
@@ -10,7 +11,7 @@ const Card = ({item}) => {
           <div className="w-full rounded-xl h-[250px] flex-shrink-0">
           <div className="w-full rounded-xl h-[250px] flex-shrink-0">
             <img
-              src="https://bit.ly/3zzCTUT"
+              src={item.imgUrl}
               alt=""
               className="object-cover w-full h-full rounded-xl"
             />
@@ -18,11 +19,11 @@ const Card = ({item}) => {
           </div>
           <div className="flex flex-col flex-1 p-5">
             <div className="pb-5 mb-5 border-b border-gray-200">
-              <h3 className="mb-1 text-lg font-bold text-left">{item?.title}</h3>
-              <span className="text-sm ">{item?.subtitle}</span>
+              <h3 className="mb-1 text-lg font-bold text-left">{item.title}</h3>
+              <span className="text-sm ">{item.subtitle}</span>
             </div>
             <div className="flex items-center justify-between w-full ml-auto">
-              <div className="text-sm text-slate-400">Tue, Jul 20</div>
+              <div className="text-sm text-slate-400">{item.date}</div>
               <div className="flex items-center gap-x-1">
                 {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
