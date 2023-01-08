@@ -23,7 +23,6 @@ const Forms = () => {
     // const [data, setData] = useState({title:'',subtitle})
     const handleSubmit= async (event)=>{
         event.preventDefault();
-        const url='';
         data.title = document.getElementById('title').value
         data.subtitle = document.getElementById('subtitle').value
         data.description = document.getElementById('description').value
@@ -32,8 +31,10 @@ const Forms = () => {
         try {
             let created = await client.add(JSON.stringify(data));
             const url = `https://ipfs.io/ipfs/${created.path}`;
+            console.log(url)
             const promise = databases.createDocument("63b97ccece09e401adea", "63b97cd6e28eaf952fe6", ID.unique(),
       { url: url })
+      
             
           } catch (error) {
             console.log(error.message);
@@ -56,8 +57,8 @@ const Forms = () => {
             <div className='flex justify-between'>
                 <div>
 
-                {/* <input type="url" className='border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2'  name="image" id='imgUrl' placeholder='fileURL'/> */}
-                <Upload/>
+                <input type="url" className='border-0 border-b-2 border-purple-200  active:border-purple-500 active:ring-0 py-3 px-2'  name="image" id='imgUrl' placeholder='fileURL'/>
+                
                 </div>
 
                 <div>
